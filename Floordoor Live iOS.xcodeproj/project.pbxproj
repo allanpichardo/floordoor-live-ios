@@ -7,23 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4578FBA0C5DD57EC154E7FB8 /* Pods_Floordoor_Live_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810109BBB74A530A570AC907 /* Pods_Floordoor_Live_iOS.framework */; };
 		B33DEF101E00567C002B1BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF0F1E00567C002B1BD2 /* AppDelegate.swift */; };
-		B33DEF121E00567C002B1BD2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF111E00567C002B1BD2 /* FirstViewController.swift */; };
-		B33DEF141E00567C002B1BD2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF131E00567C002B1BD2 /* SecondViewController.swift */; };
 		B33DEF171E00567C002B1BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33DEF151E00567C002B1BD2 /* Main.storyboard */; };
 		B33DEF191E00567C002B1BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33DEF181E00567C002B1BD2 /* Assets.xcassets */; };
-		B33DEF1C1E00567C002B1BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B33DEF1A1E00567C002B1BD2 /* LaunchScreen.storyboard */; };
+		B33DEF251E005838002B1BD2 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF241E005838002B1BD2 /* NewsViewController.swift */; };
+		B33DEF271E005853002B1BD2 /* ExclusivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF261E005853002B1BD2 /* ExclusivesViewController.swift */; };
+		B33DEF2A1E005ABE002B1BD2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF291E005ABE002B1BD2 /* Api.swift */; };
+		B33DEF2D1E006002002B1BD2 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF2C1E006002002B1BD2 /* Coordinates.swift */; };
+		B33DEF2F1E00610E002B1BD2 /* AlbumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF2E1E00610E002B1BD2 /* AlbumResponse.swift */; };
+		B33DEF331E00669B002B1BD2 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF321E00669B002B1BD2 /* Json.swift */; };
+		B33DEF351E007969002B1BD2 /* DownloadResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF341E007969002B1BD2 /* DownloadResponse.swift */; };
+		B33DEF371E007DD1002B1BD2 /* PerformanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF361E007DD1002B1BD2 /* PerformanceResponse.swift */; };
+		B33DEF391E008358002B1BD2 /* VenueResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33DEF381E008358002B1BD2 /* VenueResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4976C63C42284FE125F8E3A9 /* Pods-Floordoor Live iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Floordoor Live iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Floordoor Live iOS/Pods-Floordoor Live iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		62171C1AB109CA321BEB7F98 /* Pods-Floordoor Live iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Floordoor Live iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Floordoor Live iOS/Pods-Floordoor Live iOS.release.xcconfig"; sourceTree = "<group>"; };
+		810109BBB74A530A570AC907 /* Pods_Floordoor_Live_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Floordoor_Live_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33DEF0C1E00567C002B1BD2 /* Floordoor Live iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Floordoor Live iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33DEF0F1E00567C002B1BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B33DEF111E00567C002B1BD2 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B33DEF131E00567C002B1BD2 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B33DEF161E00567C002B1BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B33DEF181E00567C002B1BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B33DEF1B1E00567C002B1BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B33DEF1D1E00567C002B1BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B33DEF241E005838002B1BD2 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		B33DEF261E005853002B1BD2 /* ExclusivesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExclusivesViewController.swift; sourceTree = "<group>"; };
+		B33DEF291E005ABE002B1BD2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		B33DEF2C1E006002002B1BD2 /* Coordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		B33DEF2E1E00610E002B1BD2 /* AlbumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponse.swift; sourceTree = "<group>"; };
+		B33DEF321E00669B002B1BD2 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		B33DEF341E007969002B1BD2 /* DownloadResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadResponse.swift; sourceTree = "<group>"; };
+		B33DEF361E007DD1002B1BD2 /* PerformanceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceResponse.swift; sourceTree = "<group>"; };
+		B33DEF381E008358002B1BD2 /* VenueResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4578FBA0C5DD57EC154E7FB8 /* Pods_Floordoor_Live_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		777E11AA4B1AB9FCAAA769E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4976C63C42284FE125F8E3A9 /* Pods-Floordoor Live iOS.debug.xcconfig */,
+				62171C1AB109CA321BEB7F98 /* Pods-Floordoor Live iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7C0A0579AA9821DBEA45E1F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				810109BBB74A530A570AC907 /* Pods_Floordoor_Live_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B33DEF031E00567C002B1BD2 = {
 			isa = PBXGroup;
 			children = (
 				B33DEF0E1E00567C002B1BD2 /* Floordoor Live iOS */,
 				B33DEF0D1E00567C002B1BD2 /* Products */,
+				777E11AA4B1AB9FCAAA769E6 /* Pods */,
+				7C0A0579AA9821DBEA45E1F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +92,45 @@
 		B33DEF0E1E00567C002B1BD2 /* Floordoor Live iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B33DEF2B1E005FF6002B1BD2 /* Models */,
+				B33DEF281E005A97002B1BD2 /* Controllers */,
+				B33DEF231E0057ED002B1BD2 /* ViewControllers */,
 				B33DEF0F1E00567C002B1BD2 /* AppDelegate.swift */,
-				B33DEF111E00567C002B1BD2 /* FirstViewController.swift */,
-				B33DEF131E00567C002B1BD2 /* SecondViewController.swift */,
 				B33DEF151E00567C002B1BD2 /* Main.storyboard */,
 				B33DEF181E00567C002B1BD2 /* Assets.xcassets */,
-				B33DEF1A1E00567C002B1BD2 /* LaunchScreen.storyboard */,
 				B33DEF1D1E00567C002B1BD2 /* Info.plist */,
 			);
 			path = "Floordoor Live iOS";
+			sourceTree = "<group>";
+		};
+		B33DEF231E0057ED002B1BD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B33DEF241E005838002B1BD2 /* NewsViewController.swift */,
+				B33DEF261E005853002B1BD2 /* ExclusivesViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B33DEF281E005A97002B1BD2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B33DEF291E005ABE002B1BD2 /* Api.swift */,
+				B33DEF321E00669B002B1BD2 /* Json.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B33DEF2B1E005FF6002B1BD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B33DEF2C1E006002002B1BD2 /* Coordinates.swift */,
+				B33DEF2E1E00610E002B1BD2 /* AlbumResponse.swift */,
+				B33DEF341E007969002B1BD2 /* DownloadResponse.swift */,
+				B33DEF361E007DD1002B1BD2 /* PerformanceResponse.swift */,
+				B33DEF381E008358002B1BD2 /* VenueResponse.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B33DEF201E00567C002B1BD2 /* Build configuration list for PBXNativeTarget "Floordoor Live iOS" */;
 			buildPhases = (
+				0F10CCDB282B8E0BE12513FA /* [CP] Check Pods Manifest.lock */,
 				B33DEF081E00567C002B1BD2 /* Sources */,
 				B33DEF091E00567C002B1BD2 /* Frameworks */,
 				B33DEF0A1E00567C002B1BD2 /* Resources */,
+				C289F8E9506E760174446694 /* [CP] Embed Pods Frameworks */,
+				942FB7422CADE1F6B2B0BCFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -100,6 +169,7 @@
 					B33DEF0B1E00567C002B1BD2 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = U5R2K7MBU4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -127,7 +197,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B33DEF1C1E00567C002B1BD2 /* LaunchScreen.storyboard in Resources */,
 				B33DEF191E00567C002B1BD2 /* Assets.xcassets in Resources */,
 				B33DEF171E00567C002B1BD2 /* Main.storyboard in Resources */,
 			);
@@ -135,14 +204,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F10CCDB282B8E0BE12513FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		942FB7422CADE1F6B2B0BCFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Floordoor Live iOS/Pods-Floordoor Live iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C289F8E9506E760174446694 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Floordoor Live iOS/Pods-Floordoor Live iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B33DEF081E00567C002B1BD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B33DEF141E00567C002B1BD2 /* SecondViewController.swift in Sources */,
+				B33DEF331E00669B002B1BD2 /* Json.swift in Sources */,
+				B33DEF2A1E005ABE002B1BD2 /* Api.swift in Sources */,
+				B33DEF271E005853002B1BD2 /* ExclusivesViewController.swift in Sources */,
+				B33DEF2D1E006002002B1BD2 /* Coordinates.swift in Sources */,
+				B33DEF371E007DD1002B1BD2 /* PerformanceResponse.swift in Sources */,
 				B33DEF101E00567C002B1BD2 /* AppDelegate.swift in Sources */,
-				B33DEF121E00567C002B1BD2 /* FirstViewController.swift in Sources */,
+				B33DEF391E008358002B1BD2 /* VenueResponse.swift in Sources */,
+				B33DEF251E005838002B1BD2 /* NewsViewController.swift in Sources */,
+				B33DEF351E007969002B1BD2 /* DownloadResponse.swift in Sources */,
+				B33DEF2F1E00610E002B1BD2 /* AlbumResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,14 +279,6 @@
 				B33DEF161E00567C002B1BD2 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B33DEF1A1E00567C002B1BD2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B33DEF1B1E00567C002B1BD2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -261,6 +377,7 @@
 		};
 		B33DEF211E00567C002B1BD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4976C63C42284FE125F8E3A9 /* Pods-Floordoor Live iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U5R2K7MBU4;
@@ -274,6 +391,7 @@
 		};
 		B33DEF221E00567C002B1BD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62171C1AB109CA321BEB7F98 /* Pods-Floordoor Live iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U5R2K7MBU4;
