@@ -16,8 +16,9 @@ class DownloadResponse {
         
     }
     
-    init(response: String){
-        let json = JSON(stringLiteral: response)
-        isSuccess = json["execution"].bool
+    init(json: JSON){
+        
+        isSuccess = json["execution"].boolValue
+        
     }
 }

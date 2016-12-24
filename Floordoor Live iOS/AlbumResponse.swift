@@ -15,21 +15,19 @@ class AlbumResponse {
     var albumId: Int?
     var isSuccess: Bool! = false
     
-    init(response: String){
-        let json = JSON(stringLiteral: response)
+    init(json: JSON){
+        
         let content = json["content"]
         
-        artist = content["artist"].string
-        title = content["title"].string
-        imageUrl = content["image_url"].string
-        albumId = content["album_id"].int
+        artist = content["artist"].stringValue
+        title = content["title"].stringValue
+        imageUrl = content["image_url"].stringValue
+        albumId = content["album_id"].intValue
         
-        if let execution = json["execution"].bool,
-            let title = title {
-            isSuccess = execution && !title.isEmpty
-        }else{
-            isSuccess = false
-        }
+        let execution = json["execution"].boolValue
+
+        isSuccess = execution && !title!.isEmpty
+
     }
     
     init(){

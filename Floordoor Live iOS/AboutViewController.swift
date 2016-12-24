@@ -1,21 +1,19 @@
 //
-//  NewsViewController.swift
+//  AboutViewController.swift
 //  Floordoor Live iOS
 //
-//  Created by Allan Pichardo on 12/13/16.
+//  Created by Allan Pichardo on 12/22/16.
 //  Copyright © 2016 Floordoor Records. All rights reserved.
 //
 
 import UIKit
 
-class NewsViewController: UIViewController {
+class AboutViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        Api.getRequest(url: "https://www.google.com", callback: { (body) in
-            print(body)
-        })
     }
 
     override func didReceiveMemoryWarning() {

@@ -20,24 +20,19 @@ class PerformanceResponse{
     
     init(){}
     
-    init(response: String){
-        let json = JSON(stringLiteral: response)
+    init(json: JSON){
         
-        guard let content = json["content"].array,
-        let execution = json["execution"].bool else {
-            isSuccess = false
-            return
-        }
+        let content = json["content"].arrayValue
+        let execution = json["execution"].boolValue
         
         isSuccess = execution && content.count > 0
         albumIds = []
         performances = Array()
         
         for entry in content {
-            if let id = entry["album_id"].int{
-                performances?.append(Performance(albumId: id))
-                albumIds?.append(id)
-            }
+            let id = entry["album_id"].intValue
+            performances?.append(Performance(albumId: id))
+            albumIds?.append(id)
         }
         
     }

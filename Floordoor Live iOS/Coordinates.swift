@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Coordinates {
     var latitude: Double?
@@ -17,5 +18,10 @@ class Coordinates {
     init(latitude: Double, longitude: Double){
         self.latitude = latitude
         self.longitude = longitude
+    }
+
+    init(location: CLLocation){
+        self.latitude = location.coordinate.latitude
+        self.longitude = location.coordinate.longitude
     }
 }

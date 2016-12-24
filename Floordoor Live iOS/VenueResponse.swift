@@ -18,19 +18,19 @@ class VenueResponse {
     
     init(){}
     
-    init(response: String){
-        let json = JSON(stringLiteral: response)
+    init(json: JSON){
+        
         let content = json["content"]
+        isSuccess = json["execution"].boolValue
         
-        id = content["id"].int
-        name = content["name"].string
+        id = content["id"].intValue
+        name = content["name"].stringValue
         
-        if let latitude = content["latitude"].double,
-           let longitude = content["longitude"].double {
-            coordinates = Coordinates(latitude: latitude, longitude: longitude)
-        }
+        let latitude = content["latitude"].doubleValue
+        let longitude = content["longitude"].doubleValue
+        coordinates = Coordinates(latitude: latitude, longitude: longitude)
         
-        imageUrl = content["image_url"].string
+        imageUrl = content["image_url"].stringValue
         
     }
 }
