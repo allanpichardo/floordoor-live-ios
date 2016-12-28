@@ -7,17 +7,44 @@
 //
 
 import UIKit
+import WebKit
 
-class ArticleViewController: UIViewController {
+class ArticleViewController: UIViewController, WKNavigationDelegate {
 
-    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var webView: WKWebView?
     
     public var article: FeedItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        activityIndicator.isHidden = false
+        webView = WKWebView(frame: self.view.frame)
+        webView?.navigationDelegate = self
+        self.view.insertSubview(webView!, at: 0)
         loadArticlePage()
+    }
+    
+    private func toggleActivityIndicator(isShowing: Bool) {
+        activityIndicator.isHidden = !isShowing
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        let textSize: Int = 300
+        let textStyle = "document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '\(textSize)%%'"
+        let bodyStyle = "document.getElementsByTagName('article')[0].style.textAlign = 'center'";
+        let articleStyle = "document.getElementsByTagName('article')[0].style.margin = '0 auto'";
+        
+        webView.evaluateJavaScript(bodyStyle) { (arg, error) in
+            print(error.debugDescription)
+        }
+        webView.evaluateJavaScript(articleStyle) { (arg, error) in
+            print(error.debugDescription)
+        }
+        webView.evaluateJavaScript(textStyle) { (arg, error) in
+            print(error.debugDescription)
+        }
+        toggleActivityIndicator(isShowing: false)
     }
     
     private func loadArticlePage(){
@@ -29,20 +56,10 @@ class ArticleViewController: UIViewController {
             return
                     
         }
-        webView.loadHTMLString(body, baseURL: URL(string: url))
-        self.navigationItem.title = article.feedTitle
         
-        let bodyStyle = "document.getElementsByTagName('body')[0].style.textAlign = 'center';";
-        let articleStyle = "document.getElementsByTagName('article')[0].style.margin = 'auto';";
-        webView.stringByEvaluatingJavaScript(from: bodyStyle)
-        webView.stringByEvaluatingJavaScript(from: articleStyle)
+        webView?.loadHTMLString(body, baseURL: URL(string: url))
+        self.navigationItem.title = article.feedTitle
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation

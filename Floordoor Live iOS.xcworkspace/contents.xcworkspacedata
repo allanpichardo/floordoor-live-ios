@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Floordoor Live iOS.xcodeproj">
+      location = "group:/Users/allanpichardo/Documents/Dev/Floordoor Live iOS/Floordoor Records.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

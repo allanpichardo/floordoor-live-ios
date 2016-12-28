@@ -35,6 +35,7 @@ class DownloadsTableViewController: UITableViewController {
     
     
     @IBOutlet weak var continueButton: UIBarButtonItem!
+    private var activityIndicator = UIActivityIndicatorView()
     
     public var venue: VenueResponse?
     private var albums = [AlbumResponse]()
@@ -42,6 +43,8 @@ class DownloadsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initActivityIndicator()
 
         if let venue = venue {
             navigationItem.title = venue.name
@@ -51,8 +54,24 @@ class DownloadsTableViewController: UITableViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        toggleActivityIndicator(isShowing: false)
+    }
+    
+    private func initActivityIndicator(){
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        activityIndicator.center = self.tableView.center
+        self.view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = true
+    }
+    
+    private func toggleActivityIndicator(isShowing: Bool) {
+        activityIndicator.isHidden = !isShowing
+    }
+    
     private func retrieveAlbums(venue: VenueResponse){
-        
+        toggleActivityIndicator(isShowing: true)
         Api.getPerformances(venue.id!) { (performance) in
             if performance.isSuccess! {
                 if let albumIds = performance.albumIds {
@@ -74,6 +93,7 @@ class DownloadsTableViewController: UITableViewController {
                     self.albums.append(album)
                     self.tableView.reloadData()
                 }
+                self.toggleActivityIndicator(isShowing: false)
             })
         }
     }

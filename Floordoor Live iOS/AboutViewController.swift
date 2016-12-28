@@ -10,10 +10,17 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    @IBOutlet weak var linkButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func linkClicked(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "http://www.floordoorrecords.com")!, options: [:]) { (res) in
+            //do nothing
+        }
     }
 
     override func didReceiveMemoryWarning() {

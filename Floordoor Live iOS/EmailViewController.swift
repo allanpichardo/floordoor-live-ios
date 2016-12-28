@@ -12,14 +12,19 @@ class EmailViewController: UIViewController {
     
     public var selections: Set<Int>?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var emailText: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        activityIndicator.isHidden = true
         self.navigationItem.title = "Downloads"
+    }
+    
+    private func toggleActivityIndicator(isShowing: Bool) {
+        activityIndicator.isHidden = !isShowing
     }
     
     @IBAction func sendClicked(_ sender: Any) {
@@ -28,12 +33,16 @@ class EmailViewController: UIViewController {
     
     private func requestDownload(){
         if let selections = selections {
+            toggleActivityIndicator(isShowing: true)
+            sendButton.isEnabled = false
             Api.requestDownloads(selections.sorted(), email: emailText.text!, callback: { (response) in
                 if response.isSuccess! {
                     self.convertLayoutToPostSent()
                 } else {
                     self.alertErrorOccured()
+                    self.sendButton.isEnabled = true
                 }
+                self.toggleActivityIndicator(isShowing: false)
             })
         }
     }

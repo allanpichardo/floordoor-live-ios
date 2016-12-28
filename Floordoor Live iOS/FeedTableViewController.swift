@@ -76,7 +76,7 @@ class FeedTableViewController: UITableViewController, FeedParserDelegate {
     
     private func initActivityIndicator(){
         activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
-        activityIndicator.center = self.view.center
+        activityIndicator.center = self.tableView.center
         self.view.addSubview(activityIndicator)
         activityIndicator.isHidden = true
     }
@@ -106,7 +106,6 @@ class FeedTableViewController: UITableViewController, FeedParserDelegate {
     
     private func showIndicator(){
         activityIndicator.isHidden = false
-        activityIndicator.backgroundColor = UIColor.white
         activityIndicator.startAnimating()
         self.tableView.isHidden = false
     }
